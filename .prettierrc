@@ -3,5 +3,6 @@
   "printWidth": 100,
   "trailingComma": "all",
   "tabWidth": 2,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "jsxBracketSameLine": true
 }
