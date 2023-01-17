@@ -5,6 +5,7 @@ import { Game } from '../../types';
 
 import Card from '../Card/Card';
 import Loader from '../Loader/Loader';
+import Notification from '../Notification/Notification';
 
 import './Tabs.scss';
 
@@ -33,6 +34,9 @@ const Tabs = (): JSX.Element => {
   const [content, setContent] = useState<Game[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [notificationType, setNotificationType] = useState<'danger' | 'info' | 'success'>(
+    'success',
+  );
 
   const fetchApps = async (): Promise<void> => {
     try {
@@ -42,6 +46,7 @@ const Tabs = (): JSX.Element => {
     } catch (error: unknown) {
       if (error instanceof Error) {
         setError(error.message);
+        setNotificationType('danger');
       }
     } finally {
       setIsLoading(false);
@@ -72,6 +77,7 @@ const Tabs = (): JSX.Element => {
         ))}
       </div>
       <div className="px-1 py-5">
+        {error && <Notification message={error} type={notificationType} />}
         {isLoading ? (
           <Loader />
         ) : (
