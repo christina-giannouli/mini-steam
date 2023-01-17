@@ -5,3 +5,22 @@
   background: -o-linear-gradient($direction, $colors);
   background: linear-gradient($direction, $colors);
 }
+@mixin text-gradient($direction, $colors, $fallback-color) {
+  background: $fallback-color; /* fallback for old browsers */
+  @include gradient($direction, $colors);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+// Glass FX
+@mixin glass-fx {
+  background: rgba(0, 15, 24, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(11.4px);
+  -webkit-backdrop-filter: blur(11.4px);
+  border: 1px solid rgba(0, 15, 24, 0.2);
+}
+// Transition
+@mixin transition {
+  transition: all ease-in 400ms;
+}
