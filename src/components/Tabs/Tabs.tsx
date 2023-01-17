@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 import Api from '../../api';
 import { Game } from '../../types';
+
 import Card from '../Card/Card';
+import Loader from '../Loader/Loader';
 
 import './Tabs.scss';
 
@@ -70,25 +72,29 @@ const Tabs = (): JSX.Element => {
         ))}
       </div>
       <div className="px-1 py-5">
-        {TabList.map((tab) => (
-          <>
-            {activeTab === `${tab.name}` && (
-              <div key={tab.name} className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                {content?.map((game) => (
-                  <div key={game._id} className="col">
-                    <Card
-                      _id={game._id}
-                      name={game.name}
-                      header_image={game.header_image}
-                      price_overview={game.price_overview}
-                      platforms={game.platforms}
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
-          </>
-        ))}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          TabList.map((tab) => (
+            <>
+              {activeTab === `${tab.name}` && (
+                <div key={tab.name} className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                  {content?.map((game) => (
+                    <div key={game._id} className="col">
+                      <Card
+                        _id={game._id}
+                        name={game.name}
+                        header_image={game.header_image}
+                        price_overview={game.price_overview}
+                        platforms={game.platforms}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </>
+          ))
+        )}
       </div>
     </div>
   );
