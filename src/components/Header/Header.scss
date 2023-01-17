@@ -1,0 +1,11 @@
+header {
+  background-color: var(--header-bg-color);
+
+  img {
+    max-height: 35px;
+
+    @media (min-width: 576px) {
+      max-height: 50px;
+    }
+  }
+}

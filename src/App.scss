@@ -1,0 +1,18 @@
+@import 'scss/_variables.scss';
+@import 'scss/_mixins.scss';
+
+// Globally scoped variables
+:root {
+  --header-bg-color: #{$steam-darkest-grey};
+  --body-bg-gradient: #{$steam-gradient-dark};
+  --typography-base-color: #{$steam-darkest-grey};
+  --link-color: #{$steam-vibrant-blue};
+  --link-color-hover: #{$steam-chalky-blue};
+}
+
+body {
+  font-family: 'Sofia Sans', sans-serif;
+  color: var(--typography-base-color);
+  height: 100vh;
+  @include gradient(180deg, var(--body-bg-gradient));
+}
