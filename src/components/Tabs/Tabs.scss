@@ -1,0 +1,26 @@
+@import '../../scss/variables';
+@import '../../scss/_mixins.scss';
+
+.tabs {
+  border-radius: 1.5rem;
+  @include glass-fx;
+
+  button {
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    border: none;
+    @include text-gradient(to right, $steam-gradient-light, $steam-vibrant-blue);
+    @include transition;
+
+    &[disabled],
+    &:hover {
+      color: darken($steam-vibrant-blue, 30%);
+      @include gradient(90deg, $steam-gradient-light);
+    }
+
+    @media (min-width: 768px) {
+      min-width: 125px;
+    }
+  }
+}
