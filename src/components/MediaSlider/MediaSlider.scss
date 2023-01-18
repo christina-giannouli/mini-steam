@@ -1,0 +1,74 @@
+@import '../../scss/mixins';
+
+.slider {
+  height: 270px;
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 680px;
+  }
+
+  .slide {
+    opacity: 0;
+    transition: 1s linear;
+
+    &.active {
+      opacity: 1;
+      transition-duration: 1s;
+      transform: scale(1.08);
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 42%;
+    font-size: 2rem;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    color: var(--link-color);
+    background-color: white;
+    height: 4rem;
+    width: 4rem;
+    @include transition;
+
+    @media (min-width: 1200px) {
+      top: 45%;
+    }
+
+    &:hover {
+      color: var(--dark-bg-color);
+    }
+
+    .bi {
+      padding-top: 3px;
+    }
+
+    &.right {
+      right: -3.5rem;
+
+      @media (min-width: 1200px) {
+        right: -4.5rem;
+      }
+
+      .bi {
+        padding-left: 6px;
+      }
+    }
+
+    &.left {
+      left: -3.5rem;
+
+      @media (min-width: 1200px) {
+        left: -4.5rem;
+      }
+
+      .bi {
+        padding-right: 6px;
+      }
+    }
+  }
+}
