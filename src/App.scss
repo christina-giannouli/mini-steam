@@ -3,13 +3,29 @@
 
 // Globally scoped variables
 :root {
-  --header-bg-color: #{$steam-darkest-grey};
+  --dark-bg-color: #{$steam-darkest-grey};
   --body-bg-gradient: #{$steam-gradient-dark};
+  --link-color: #{$steam-chalky-blue};
 }
 
 body {
   font-family: 'Sofia Sans', sans-serif;
   color: aliceblue;
   min-height: 100vh;
+  overflow-x: hidden;
   @include gradient(180deg, var(--body-bg-gradient));
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 800;
+  }
+
+  a,
+  button {
+    @include transition;
+  }
 }

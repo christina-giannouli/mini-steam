@@ -15,12 +15,16 @@
 // Glass FX
 @mixin glass-fx {
   background: rgba(0, 15, 24, 0.6);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(11.4px);
-  -webkit-backdrop-filter: blur(11.4px);
-  border: 1px solid rgba(0, 15, 24, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 15, 24, 0.17);
 }
 // Transition
 @mixin transition {
-  transition: all ease-in 400ms;
+  transition: all ease-in 300ms;
+}
+// Shadows
+@mixin neon-shadow {
+  box-shadow: 0 2px 16px 2px rgba(0, 187, 255, 0.8);
 }
