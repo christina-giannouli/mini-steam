@@ -34,7 +34,7 @@ export type Movie = {
   };
 };
 
-export type Game = {
+export type App = {
   _id: string;
   name: string;
   about_the_game: string;

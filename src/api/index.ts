@@ -1,4 +1,4 @@
-import { Game } from '../types';
+import { App } from '../types';
 
 // TODO: Improve error handling. Maybe add more messages based on status code?
 function handleResponse(response: Response) {
@@ -9,10 +9,10 @@ function handleResponse(response: Response) {
 }
 
 const Api = {
-  getAppById(id: string): Promise<Game[]> {
+  getAppById(id: string | undefined): Promise<App[]> {
     return fetch(`${process.env.REACT_APP_API_URL}/api/apps?appid=${id}`).then(handleResponse);
   },
-  getAppsByTab(tab: string): Promise<Game[]> {
+  getAppsByTab(tab: string): Promise<App[]> {
     return fetch(`${process.env.REACT_APP_API_URL}/api/apps?tab=${tab}`).then(handleResponse);
   },
 };

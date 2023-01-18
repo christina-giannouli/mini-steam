@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Api from '../../api';
-import { Game } from '../../types';
+import { App } from '../../types';
 
 import Card from '../Card/Card';
 import Loader from '../Loader/Loader';
@@ -31,7 +31,7 @@ export const TabList = [
 
 const Tabs = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState<string>(TabList[0].name);
-  const [content, setContent] = useState<Game[]>([]);
+  const [content, setContent] = useState<App[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [notificationType, setNotificationType] = useState<'danger' | 'info' | 'success'>(
@@ -40,7 +40,8 @@ const Tabs = (): JSX.Element => {
 
   const fetchApps = async (): Promise<void> => {
     try {
-      const apps = await Api.getAppsByTab(activeTab);
+      const response: App[] = await Api.getAppsByTab(activeTab);
+      const apps = response.slice(0, 10);
       setContent(apps);
       setError(null);
     } catch (error: unknown) {
@@ -53,6 +54,7 @@ const Tabs = (): JSX.Element => {
     }
   };
 
+  // Couldn't find a proper type for this :(
   const handleClick = (e: any): void => {
     setIsLoading(true);
     setActiveTab(e.target.id);
