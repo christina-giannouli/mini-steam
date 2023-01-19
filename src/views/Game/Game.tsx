@@ -12,6 +12,7 @@ import Loader from '../../components/Loader/Loader';
 import PriceButton from '../../components/PriceButton/PriceButton';
 
 import './Game.scss';
+import PlatformIcons from '../../components/PlatformIcons/PlatformIcons';
 
 const Game = (): JSX.Element => {
   const [content, setContent] = useState<Partial<App>>({});
@@ -139,20 +140,12 @@ const Game = (): JSX.Element => {
                     <span>{content.publishers}</span>
                   </div>
                   <div className="mt-3">
-                    {content.platforms?.mac && (
-                      <span className="pe-3">
-                        <i className="bi bi-apple"></i>
-                      </span>
-                    )}
-                    {content.platforms?.linux && (
-                      <span>
-                        <i className="bi bi-ubuntu"></i>
-                      </span>
-                    )}
-                    {content.platforms?.mac && (
-                      <span>
-                        <i className="bi bi-windows"></i>
-                      </span>
+                    {content.platforms && (
+                      <PlatformIcons
+                        mac={content.platforms?.mac}
+                        linux={content.platforms?.linux}
+                        windows={content.platforms?.windows}
+                      />
                     )}
                   </div>
                 </div>

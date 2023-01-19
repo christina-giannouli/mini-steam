@@ -3,8 +3,8 @@ import Tabs from '../../components/Tabs/Tabs';
 const GameList = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="row justify-content-center">
-        <div className="col col-lg-10">
+      <div className="row">
+        <div className="col">
           <Tabs />
         </div>
       </div>

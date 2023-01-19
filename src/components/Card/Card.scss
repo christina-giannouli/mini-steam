@@ -1,0 +1,39 @@
+@import '../../scss/mixins';
+
+.game-card {
+  position: relative;
+  @include glass-fx;
+  @include transition;
+
+  &:hover {
+    @include neon-shadow-blue;
+  }
+
+  .platform-icons-wrapper {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    width: 100%;
+
+    span {
+      background-color: var(--dark-bg-color);
+      border-radius: 50rem;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include neon-shadow-blue;
+
+      .bi {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .price-wrapper {
+    position: absolute;
+    top: -16px;
+    right: -12px;
+  }
+}

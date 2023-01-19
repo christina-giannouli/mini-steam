@@ -13,13 +13,13 @@ const PriceButton = ({
 }): JSX.Element => {
   return (
     <div className="price-btn">
-      <div className="discount-wrapper rounded-circle d-flex justify-content-center align-items-center">
-        {discount !== 0 && (
+      {discount !== 0 && (
+        <div className="discount-wrapper rounded-circle d-flex justify-content-center align-items-center">
           <span id="discount" className="rounded-circle">
             -{discount}%
           </span>
-        )}
-      </div>
+        </div>
+      )}
       <button className="btn rounded-4 py-1 px-4 d-flex align-items-center justify-content-between">
         <p className="d-flex flex-column align-items-start m-0 flex-grow-1">
           {initPrice && (
