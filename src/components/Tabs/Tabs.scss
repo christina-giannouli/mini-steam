@@ -11,12 +11,12 @@
     letter-spacing: 0.5px;
     border: none;
     @include transition;
-    @include text-gradient(to right, $steam-gradient-light, $steam-vibrant-blue);
+    @include text-gradient(to right, $steam-gradient-blue, $steam-vibrant-blue);
 
     &[disabled],
     &:hover {
       color: darken($steam-vibrant-blue, 30%);
-      @include gradient(90deg, $steam-gradient-light);
+      @include gradient(90deg, $steam-gradient-blue);
     }
 
     @media (min-width: 768px) {

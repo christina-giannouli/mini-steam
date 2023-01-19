@@ -18,13 +18,16 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(0, 15, 24, 0.17);
+  border: 1px solid rgba(0, 15, 24, 0.25);
 }
 // Transition
 @mixin transition {
   transition: all ease-in 300ms;
 }
 // Shadows
-@mixin neon-shadow {
+@mixin neon-shadow-blue {
   box-shadow: 0 2px 16px 2px rgba(0, 187, 255, 0.8);
+}
+@mixin neon-shadow-green {
+  box-shadow: 0 2px 16px 2px rgba(110, 238, 135, 0.8);
 }

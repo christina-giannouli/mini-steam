@@ -1,0 +1,51 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.price-btn {
+  position: relative;
+
+
+  .discount-wrapper {
+    position: absolute;
+    top: -28px;
+    right: -22px;
+    width: 3rem;
+    height: 3rem;
+    @include glass-fx;
+
+    #discount {
+      font-weight: 800;
+      font-size: .875rem;
+      @include text-gradient(to right, $steam-gradient-green, $steam-vibrant-green);
+    }
+  }
+
+  button {
+    width: 100%;
+    border: none;
+    font-weight: 800;
+    @include gradient(90deg, $steam-gradient-green);
+    @include neon-shadow-green;
+    @include transition;
+
+    #initial-price {
+      //font-weight: 100;
+      font-size: .75rem;
+      color: darken($steam-darker-green, 20%);
+    }
+
+    #final-price {
+      font-size: 0.875rem;
+      color: darken($steam-darker-green, 35%);
+    }
+
+    .icon-wrapper {
+      border-left: 1px solid rgba(0, 0, 0, 0.15);
+
+      .bi {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+}

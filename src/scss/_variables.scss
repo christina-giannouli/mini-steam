@@ -4,12 +4,13 @@ $steam-chalky-blue: #66c0f4;
 $steam-dusty-blue: #417aa1;
 $steam-blue: #2d73ff;
 // Green-ish
-$steam-vibrant-green: #59bf40;
-$steam-darker-green: #5ba32b;
+$steam-vibrant-green: #6eee87;
+$steam-darker-green: #5fc52e;
 // Grey-ish
 $steam-dark-grey: #2a475e;
 $steam-darker-grey: #1b2838;
 $steam-darkest-grey: #000f18;
 // Gradients
 $steam-gradient-dark: $steam-dark-grey 0%, $steam-darker-grey 80%;
-$steam-gradient-light: $steam-vibrant-blue 0%, $steam-blue 100%;
+$steam-gradient-blue: $steam-vibrant-blue 0%, $steam-blue 100%;
+$steam-gradient-green: $steam-vibrant-green 0%, $steam-darker-green 100%;
