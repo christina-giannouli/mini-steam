@@ -35,9 +35,13 @@ const MediaSlider = ({ slides }: any): JSX.Element | null => {
           {index === activeSlide && (
             <>
               {slide.image ? (
-                <img src={slide.image} alt="game screenshot" className="img-fluid rounded-4" />
+                <img
+                  src={slide.image}
+                  alt="game screenshot"
+                  className="img-fluid rounded-4 shadow-lg"
+                />
               ) : (
-                <video className="img-fluid rounded-4" autoPlay loop muted>
+                <video className="img-fluid rounded-4 shadow-lg" autoPlay loop muted>
                   <source src={slide.video} type="video/mp4" />
                 </video>
               )}

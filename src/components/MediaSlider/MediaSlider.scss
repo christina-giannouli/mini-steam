@@ -25,14 +25,15 @@
   .arrow {
     position: absolute;
     top: 42%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     z-index: 10;
     cursor: pointer;
     user-select: none;
     color: var(--link-color);
     background-color: white;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
+    border: 3px solid var(--primary-color);
     @include transition;
 
     @media (min-width: 1200px) {
@@ -45,10 +46,11 @@
 
     .bi {
       padding-top: 3px;
+      font-weight: bold;
     }
 
     &.right {
-      right: -3.5rem;
+      right: -2.5rem;
 
       @media (min-width: 1200px) {
         right: -4.5rem;
@@ -60,7 +62,7 @@
     }
 
     &.left {
-      left: -3.5rem;
+      left: -2.5rem;
 
       @media (min-width: 1200px) {
         left: -4.5rem;
