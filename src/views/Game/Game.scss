@@ -1,0 +1,154 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.game {
+  .game-header {
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    height: auto;
+
+    @media (min-width: 1200px) {
+      min-height: 550px;
+
+      > .container {
+        position: absolute;
+        bottom: -20%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 75%;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      min-height: 650px;
+
+      > .container {
+        bottom: -15%;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      min-height: 750px;
+
+      > .container {
+        bottom: -20%;
+      }
+    }
+
+    #go-back {
+      color: var(--link-color);
+      background: transparent;
+      border: none;
+      @include transition;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    img {
+      width: 100%;
+      @include neon-shadow-blue;
+    }
+
+    .price-btn {
+      @media (min-width: 768px) {
+        float: right;
+        clear: right;
+      }
+    }
+
+    .desc {
+      border-radius: 1.5rem;
+      @include glass-fx;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      font-weight: 100;
+
+      span {
+        &:first-child {
+          display: inline-block;
+          width: 100px;
+        }
+      }
+    }
+
+    + .container {
+      @media (min-width: 1200px) {
+        margin-top: 10rem;
+      }
+
+      @media (min-width: 1600px) {
+        margin-top: 13rem;
+      }
+    }
+  }
+
+  #category {
+    font-weight: 100;
+    .bi {
+      color: var(--link-color);
+    }
+  }
+
+  .game-title {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 4px;
+      border-radius: 1.5rem;
+      top: -14px;
+      left: 0;
+      right: auto;
+      margin: 0;
+      @include gradient(90deg, $steam-gradient-blue);
+    }
+  }
+
+  .section-title {
+    @extend .game-title;
+
+    &::before {
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  .slider-wrapper {
+    @include gradient(90deg, $steam-gradient-blue);
+  }
+
+  .about {
+    br {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      margin: 2.5rem auto;
+      @include neon-shadow-blue;
+    }
+    ul {
+      margin: 0;
+    }
+    h2 {
+      margin: 2rem 0 1.5rem 0;
+      font-size: 1.125rem;
+      font-weight: 100;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+  }
+}
