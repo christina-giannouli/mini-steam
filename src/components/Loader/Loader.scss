@@ -12,7 +12,7 @@
     font-size: 16px;
     letter-spacing: 10px;
     color: aliceblue;
-    left: 12%;
+    left: 25%;
   }
 
   .circle {
@@ -21,18 +21,18 @@
     position: absolute;
     border-radius: 50%;
     background-color: #fff;
-    left: 20%;
+    left: 30%;
     transform-origin: 50%;
     animation: circle 0.5s alternate infinite ease;
 
     &:nth-child(2) {
-      left: 40%;
+      left: 50%;
       animation-delay: 0.2s;
     }
 
     &:nth-child(3) {
       left: auto;
-      right: 35%;
+      right: 25%;
       animation-delay: 0.3s;
     }
   }
@@ -46,17 +46,17 @@
     top: 62px;
     transform-origin: 50%;
     z-index: -1;
-    left: 20%;
+    left: 30%;
     filter: blur(1px);
     animation: shadow 0.5s alternate infinite ease;
 
     &:nth-child(4) {
-      left: 40%;
+      left: 50%;
       animation-delay: 0.2s;
     }
     &:nth-child(5) {
       left: auto;
-      right: 35%;
+      right: 25%;
       animation-delay: 0.3s;
     }
   }

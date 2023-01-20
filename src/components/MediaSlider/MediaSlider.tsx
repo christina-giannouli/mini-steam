@@ -2,7 +2,11 @@ import { useState } from 'react';
 
 import './MediaSlider.scss';
 
-const MediaSlider = ({ slides }: any): JSX.Element | null => {
+const MediaSlider = ({
+  slides,
+}: {
+  slides: { image: string; video: string }[];
+}): JSX.Element | null => {
   const [activeSlide, setActiveSlide] = useState(0);
   const length = slides.length;
 

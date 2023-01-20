@@ -4,18 +4,17 @@
 .price-btn {
   position: relative;
 
-
   .discount-wrapper {
     position: absolute;
-    top: -28px;
-    right: -22px;
-    width: 3rem;
-    height: 3rem;
+    top: -10px;
+    left: -20px;
+    width: 2.5rem;
+    height: 2.5rem;
     @include glass-fx;
 
     #discount {
       font-weight: 800;
-      font-size: .875rem;
+      font-size: 0.75rem;
       @include text-gradient(to right, $steam-gradient-green, $steam-vibrant-green);
     }
   }
@@ -30,7 +29,7 @@
 
     #initial-price {
       //font-weight: 100;
-      font-size: .75rem;
+      font-size: 0.75rem;
       color: darken($steam-darker-green, 20%);
     }
 
@@ -47,5 +46,4 @@
       }
     }
   }
-
 }

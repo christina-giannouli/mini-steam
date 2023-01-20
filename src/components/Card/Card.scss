@@ -9,6 +9,10 @@
     @include neon-shadow-blue;
   }
 
+  img {
+    width: 100%;
+  }
+
   .platform-icons-wrapper {
     position: absolute;
     bottom: 14px;
@@ -26,7 +30,7 @@
       @include neon-shadow-blue;
 
       .bi {
-        font-size: 0.875rem;
+        font-size: 0.75rem;
       }
     }
   }

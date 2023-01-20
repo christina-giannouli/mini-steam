@@ -154,7 +154,7 @@ const Game = (): JSX.Element => {
           </div>
           {/*Game Relative Section*/}
           <div className="container">
-            <div className="row justify-content-center my-5 py-4">
+            <div className="row my-5 py-4">
               <h2 className="text-center mb-5 section-title">Is this game relevant to you?</h2>
               <>
                 {content.categories?.map((cat) => (

@@ -2,7 +2,7 @@ import { Platforms } from '../../types';
 
 const PlatformIcons = ({ mac, linux, windows }: Platforms): JSX.Element => {
   return (
-    <div className="row align-items-center">
+    <div className="row g-5 align-items-center">
       {mac && (
         <div className="col-1">
           <span>
