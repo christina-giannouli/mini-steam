@@ -68,11 +68,11 @@ const Game = (): JSX.Element => {
         setNotificationType('danger');
       }
     } finally {
-      setSliderMedia();
+      createSliderMedia();
       setIsLoading(false);
     }
   };
-  const setSliderMedia = (): void => {
+  const createSliderMedia = (): void => {
     const { movies, screenshots } = content;
     const videos = movies?.map((movie) => ({ video: movie.mp4.max, image: '' })) || null;
     const images = screenshots?.map((img) => ({ image: img.path_full, video: '' })) || null;
@@ -88,7 +88,16 @@ const Game = (): JSX.Element => {
 
   return (
     <div className="game">
-      {error && <Notification message={error} type={notificationType} />}
+      {error && (
+        <div className="container pt-5">
+          <div className="row justify-content-center">
+            <div className="col">
+              <Notification message={error} type={notificationType} />
+            </div>
+          </div>
+        </div>
+      )}
+
       {isLoading || slides.length === 0 ? (
         <Loader />
       ) : (
